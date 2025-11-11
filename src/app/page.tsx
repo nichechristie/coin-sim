@@ -2,6 +2,7 @@
 
 import { useMiniApp } from '@neynar/react';
 import { useAccount } from 'wagmi';
+import { ConnectButton } from '~/components/wallet/ConnectButton';
 
 export default function Home() {
   const { isSDKLoaded } = useMiniApp();
@@ -52,10 +53,14 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mt-8">
+            <ConnectButton />
+          </div>
+
           <div className="mt-8 p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white">
             <h2 className="text-2xl font-bold mb-2">Ready to Build!</h2>
             <p className="text-blue-100">
-              Your Farcaster mini-app is configured with Base network support.
+              Your Farcaster mini-app is configured with Base network support and WalletConnect.
               Start building your coin simulation features!
             </p>
           </div>
